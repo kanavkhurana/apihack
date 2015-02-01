@@ -5,11 +5,11 @@
     /*text-align: center;*/
 }
 .container ul{
-text-align: center;
-list-style: none;
+text-align: left;
+/*list-style: none;*/
 }
 .container li{
-    display: inline-block;
+    /*display: inline-block;*/
 }
 form {
     width: 60%;

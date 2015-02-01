@@ -4,7 +4,9 @@
     "3": '17-00'
 };
 */
-/*PENDING - to delay the second dropdown - because it fetches values from the API */
+/*PENDING - 
+1) Icon loading takes time
+2) to delay the second dropdown - because it fetches values from the API */
 var filteredEvents = [];
 
 $(document).ready(function() {
