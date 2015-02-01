@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>API Hack</title>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <ul>
+            <!-- Add more icons -->
+            <li>
+                <i class="fa fa-music"></i>
+            </li>
+            <li>
+                <i class="fa fa-cutlery"></i>
+            </li>
+        </ul>
+        <form>
+            <label for="freeTime">When are you free?</label>
+            <select name="freeTime">
+                <option value="00-12">Morning</option>
+                <option value="12-17">Afternoon</option>
+                <option value="17-00">Evening</option>
+            </select>
+
+            <label for="category">What do you feel like going for?</label>
+            <!--These options to be populated from the eventBrite API-->
+            <select name="category">
+
+            </select>
+            <input type="submit" value="Submit">
+        </form>
+        <div class="results-container">
+            <div class="search-results"></div>
+            <div class="results"></div>
+        </div>
+    </div>
+    <div class="templates hidden">
+        <dl class="result event">
+            <dt>Name</dt>
+            <dd class="event-name">
+                <a href="" target="_blank"></a>
+            </dd>
+            <!--<dt>Description</dt>
+            <dd class="event-description"></dd>-->
+            <dt>Logo</dt>
+            <dd class="event-logo">
+                <img src="" />
+            </dd>
+            <dt>Timing</dt>
+            <dd class="event-timing"></dd>
+            <dt>Organizer</dt>
+            <dd class="event-organizer"></dd>
+            <dt>Venue</dt>
+            <dd class="event-venue"></dd>
+            <dt>View on Google Maps</dt>
+            <dd class="event-marker">
+                <a href="" target="_blank"></a>
+            </dd>
+            <dt>Price</dt>
+            <dd class="event-price">
+            </dd>
+
+        </dl>
+        <dl class="result empty">
+            <p>Uh-oh! No events found! Please try changing the filters!</p>
+        </dl>
+        <!--<dl class="result topanswerers">
+            <dt>User Display Name</dt>
+            <dd class="display-name">
+                <a href="" target="_blank"></a>
+            </dd>
+            <dt>Score</dt>
+            <dd class="score"></dd>
+            <dt>Reputation</dt>
+            <dd class="reputation"></dd>
+            <dt>Profile Image</dt>
+            <dd class="image"><img src="">
+            </dd>
+        </dl>-->
+        <div class="error">
+            <p>Uh-oh! Something went wrong with your request. Here's what we know:</p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
