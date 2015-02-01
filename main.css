@@ -1,15 +1,15 @@
-.container {
-    /*margin: 3em auto;
-	width: 600px;*/
+/*
+.container > ul{
     
-    /*text-align: center;*/
+    text-align: center;
 }
-.container ul{
-text-align: left;
-/*list-style: none;*/
+*/
+.container > ul{
+text-align: center;
+list-style: none;
 }
-.container li{
-    /*display: inline-block;*/
+.container > ul > li{
+    display: inline-block;
 }
 form {
     width: 60%;

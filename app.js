@@ -162,7 +162,7 @@ var showEvent = function(event) {
 
     var eventTime = result.find('.event-timing');
     //format time
-    eventTime.text(event.start.utc + '-' + event.end.utc);
+    eventTime.text(formatAMPM(event.start.utc) + ' - ' + formatAMPM(event.end.utc));
 
     var eventOrganizer = result.find('.event-organizer');
     eventOrganizer.text(event.organizer.name);
@@ -267,6 +267,16 @@ function showError(error) {
         //errorElem.append(errorText);
         return errorElem;
     }
+function formatAMPM(datetime) {
+  var hours = new Date(datetime).getHours();
+  var minutes = new Date(datetime).getMinutes();
+  var ampm = hours >= 12 ? 'pm' : 'am';
+  hours = hours % 12;
+  hours = hours ? hours : 12; // the hour '0' should be '12'
+  minutes = minutes < 10 ? '0'+minutes : minutes;
+  var datetimeInAMPM = hours + ':' + minutes + ' ' + ampm;
+  return datetimeInAMPM;
+}
     /*
     // takes a string of semi-colon separated tags to be searched
     // for on StackOverflow
